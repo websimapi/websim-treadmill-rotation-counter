@@ -13,6 +13,7 @@
         <p>Print the QR code below and tape it securely to your treadmill belt or roller. Point your camera at the moving QR code.</p>
 
         <img id="qr-to-print" src="qrcode.png" alt="QR Code to print">
+        <button id="print-button" onclick="window.print()">Print QR</button>
         
         <div id="camera-feed">
             <video id="video" playsinline></video>
@@ -26,6 +27,10 @@
                 Detection Status: <span id="current-detection-status">Awaiting detection...</span>
             </div>
         </div>
+    </div>
+    
+    <div class="print-only">
+        <img id="qr-print" src="qrcode.png" alt="QR Code for printing">
     </div>
     
     <script type="module" src="main.js"></script>

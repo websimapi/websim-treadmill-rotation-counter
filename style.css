@@ -1,11 +1,11 @@
 body {
-    font-family: sans-serif;
+    font-family: "Noto Sans", sans-serif;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
     color: #333;
 }
 
@@ -34,10 +34,10 @@ body {
 }
 
 #qr-to-print {
-    max-width: 150px;
+    max-width: 300px;
     height: auto;
-    border: 1px solid #ccc;
-    padding: 10px;
+    border: none;
+    padding: 0;
     margin: 10px auto;
     display: block;
 }
@@ -73,3 +73,19 @@ body {
     color: red;
 }
 
+.print-only { display: none; }
+
+@media print {
+    body { background: #fff; }
+    #app-container { display: none !important; }
+    .print-only { display: block; }
+    #qr-print {
+        width: 6in;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        border: none;
+        padding: 0;
+        image-rendering: pixelated;
+    }
+}
