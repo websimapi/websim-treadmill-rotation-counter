@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treadmill Rotation Counter</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "jsqr": "https://cdn.jsdelivr.net/npm/jsqr@1.1.0/dist/jsQR.min.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="app-container">
+        <h1>Treadmill Rotation Counter</h1>
+        <p>Print the QR code below and tape it securely to your treadmill belt or roller. Point your camera at the moving QR code.</p>
+
+        <img id="qr-to-print" src="qrcode.png" alt="QR Code to print">
+        
+        <div id="camera-feed">
+            <video id="video" playsinline></video>
+            <canvas id="canvas" style="display: none;"></canvas>
+            <div id="status-message">Awaiting camera access...</div>
+        </div>
+
+        <div id="counter-display">
+            <h2>Rotations Detected: <span id="rotation-count">0</span></h2>
+            <div id="detection-indicator">
+                Detection Status: <span id="current-detection-status">Awaiting detection...</span>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+

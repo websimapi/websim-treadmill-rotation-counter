@@ -1,0 +1,75 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+#app-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+#camera-feed {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+#video {
+    width: 100%;
+    max-height: 400px;
+    background: black;
+    border-radius: 5px;
+    /* Transform scale will be controlled by JS based on camera facing mode */
+}
+
+#qr-to-print {
+    max-width: 150px;
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+}
+
+#counter-display {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+}
+
+#rotation-count {
+    font-size: 2em;
+    font-weight: bold;
+    color: #28a745;
+}
+
+#detection-indicator {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.detected {
+    color: green;
+    font-weight: bold;
+}
+
+.not-detected {
+    color: orange;
+}
+
+.error {
+    color: red;
+}
+
