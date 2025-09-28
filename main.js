@@ -1,4 +1,4 @@
-import jsQR from 'jsqr';
+// removed ESM import; using global window.jsQR
 
 const QR_CODE_IDENTIFIER = "TREADMILL_ROTATION_MARKER";
 
@@ -47,7 +47,7 @@ function tick() {
         const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
         
         // Scan for QR code
-        const code = jsQR(imageData.data, imageData.width, imageData.height, {
+        const code = window.jsQR(imageData.data, imageData.width, imageData.height, {
             inversionAttempts: "dontInvert", 
         });
 
