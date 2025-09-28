@@ -1,4 +1,4 @@
-import jsQR from 'jsqr';
+import { jsQR } from 'jsqr';
 
 const QR_CODE_IDENTIFIER = "TREADMILL_ROTATION_MARKER";
 
@@ -108,4 +108,3 @@ async function setupCamera() {
 
 // Start the application
 setupCamera();
-
